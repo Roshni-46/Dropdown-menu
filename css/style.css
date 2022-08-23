@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+/*basic css ends here*/
+nav {
+    background-color:gray ;
+    width: 650px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+nav ul li{
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a{
+color:white;
+padding: 15px 25px;
+display: block;
+transition: 0.3s;
+position: relative;
+z-index: 1;
+}
+nav ul li:hover a{
+    background-color:;
+}
+nav ul li a::before{
+    content: '';
+    width: 0%;
+    height: 100%;
+    
+    position: absolute;
+    background-color: red;
+    z-index: -1;
+    top:0;
+    right:0;
+    transition: .5s;
+    
+}
+nav ul li:hover>a::before{
+    width: 100%;
+    
+    
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 100%;
+    
+    position: absolute;
+    background-color: red;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    transition: .5s;
+    
+}
+nav ul li:hover >>a::after{
+    width: 100%;
+    
+    
+}
+nav ul li ul{
+    position: absolute;
+    background-color: darkgray;
+    width: 150px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    margin: -30%;
+}
+nav ul li:hover>ul{
+    opacity: 1;
+    visibility: visible;
+    margin: 0;
+}
+nav ul li ul li{
+    display: block;
+    margin: 10px;
+    
+}
+nav ul li ul li ul{
+    background-color: #777;
+    left: 100%;
+    top: 30px;
+}
